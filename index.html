@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Home</title>
+  <meta name="description" content="MKstream - Watch Anime, Donghua, Cartoons, Serials, Dramas and Web Series." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+    <div class="logo" id="siteLogo">MKstream</div>
+    <nav id="topCategories" class="top-categories" aria-label="Top categories"></nav>
+    <div class="header-right">
+      <button id="searchBtn" class="icon" aria-label="Search">🔍</button>
+      <input id="searchInput" class="search-input hidden" placeholder="Search titles, categories..." />
+      <a id="adminLink" class="admin-link" href="admin.html" title="Admin" target="_blank">👤</a>
+    </div>
+  </header>
+
+  <aside id="siteMenu" class="side-menu hidden" aria-hidden="true">
+    <button id="closeMenu" class="menu-close">✖</button>
+    <nav id="menuLinks"></nav>
+  </aside>
+
+  <main class="main">
+    <section id="recentSection" class="section">
+      <h2>Latest Uploads</h2>
+      <div id="videoGrid" class="video-grid" aria-live="polite"></div>
+    </section>
+
+    <div class="controls-row">
+      <div class="pagination" id="pagination"></div>
+      <button id="loadMoreBtn" class="btn load-more">Load More</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small id="footerText">© MKstream</small>
+  </footer>
+</body>
+</html>

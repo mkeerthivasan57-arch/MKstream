@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Admin</title>
+  <meta name="description" content="MKstream admin panel" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <main class="admin-main">
+    <h1>MKstream Admin</h1>
+
+    <section id="authSection" class="admin-section">
+      <h2>Login</h2>
+      <input id="adminPassInput" type="password" placeholder="Admin password" />
+      <button id="adminLoginBtn" class="btn">Login</button>
+      <p id="authMsg" class="muted"></p>
+    </section>
+
+    <section id="adminPanel" class="admin-section hidden">
+      <h2>Site Editor</h2>
+      <div class="form-row">
+        <input id="siteTitleInput" placeholder="Site title (MKstream)" />
+        <input id="siteLogoInput" placeholder="Logo text or URL" />
+        <button id="saveSiteBtn" class="btn">Save</button>
+      </div>
+
+      <h2>Manage Categories & Subcategories</h2>
+      <div class="form-row">
+        <input id="newCategoryName" placeholder="New main category (e.g. Anime)" />
+        <button id="addCategoryBtn" class="btn">Add Category</button>
+      </div>
+      <div class="form-row">
+        <select id="selectCategoryForSub"></select>
+        <input id="newSubName" placeholder="Subcategory name (e.g. Shounen)" />
+        <button id="addSubBtn" class="btn">Add Subcategory</button>
+      </div>
+
+      <h2>Manage Servers</h2>
+      <div class="form-row">
+        <input id="serverNameInput" placeholder="Server name" />
+        <input id="serverUrlInput" placeholder="Server URL" />
+        <button id="addServerBtn" class="btn">Add Server</button>
+      </div>
+      <ul id="serversList"></ul>
+
+      <h2>Manage Videos / Series</h2>
+      <div class="form-row">
+        <input id="videoTitleInput" placeholder="Title" />
+        <input id="videoThumbInput" placeholder="Thumbnail URL" />
+        <select id="videoCategorySelect"></select>
+        <select id="videoSubSelect"></select>
+        <input id="videoEpisodes" type="number" placeholder="Total episodes" />
+        <input id="videoUrlInput" placeholder="Primary video source URL (mp4)" />
+        <button id="addVideoBtn" class="btn">Add Video</button>
+      </div>
+      <ul id="videosList"></ul>
+
+      <h2>Change Admin Password</h2>
+      <div class="form-row">
+        <input id="changePassInput" type="password" placeholder="New password" />
+        <button id="changePassBtn" class="btn">Change</button>
+      </div>
+
+      <h2>Import / Export Data</h2>
+      <div class="form-row">
+        <button id="exportBtn" class="btn">Export JSON</button>
+        <input id="importFile" type="file" accept=".json" />
+      </div>
+    </section>
+  </main>
+</body>
+</html>

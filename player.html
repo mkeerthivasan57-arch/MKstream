@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Player</title>
+  <meta name="description" content="Player - MKstream" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js" defer></script>
+  <script src="player.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <button id="menuBtn2" class="menu-btn" aria-label="Open menu">☰</button>
+    <div class="logo"><a href="index.html" id="playerLogo">MKstream</a></div>
+    <div class="header-right">
+      <button id="searchBtn2" class="icon">🔍</button>
+      <input id="searchInput2" class="search-input hidden" placeholder="Search..." />
+      <a class="admin-link" href="admin.html" target="_blank">👤</a>
+    </div>
+  </header>
+
+  <aside id="siteMenu2" class="side-menu hidden">
+    <button id="closeMenu2" class="menu-close">✖</button>
+    <nav id="menuLinks2"></nav>
+  </aside>
+
+  <main class="main player-main">
+    <section class="player-area">
+      <div class="player-container">
+        <div class="player-wrapper">
+          <video id="mainVideo" class="video" controls preload="metadata">
+          </video>
+          <div id="gestureOverlay" class="gesture-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="player-controls">
+          <label for="serverSelect">Server:</label>
+          <select id="serverSelect"></select>
+
+          <label for="qualitySelect">Quality:</label>
+          <select id="qualitySelect"></select>
+
+          <label for="subtitleSelect">Subtitles:</label>
+          <select id="subtitleSelect"></select>
+
+          <button id="downloadBtn" class="btn">⬇ Download</button>
+        </div>
+
+        <div class="server-note">Select server below player — admin can add/remove servers.</div>
+
+        <div class="episode-area">
+          <div class="episode-top">
+            <label for="episodeRange">Episode range:</label>
+            <select id="episodeRange"></select>
+          </div>
+          <div id="episodeList" class="episode-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
